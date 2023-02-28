@@ -1,10 +1,12 @@
 import React from 'react';
+import History from '../History';
+import { ControlPanelBlock } from './styled';
 
 const ControlPanel = () => {
   return (
-      <div>
-        ControlPanel
-      </div>
+      <ControlPanelBlock>
+        <History />
+      </ControlPanelBlock>
   );
 };
 

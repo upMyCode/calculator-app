@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
 import { Header } from "../../components";
 
-class HomePageCC extends Component {
+class MainPageCC extends Component {
   render() {
     return (
         <div>
@@ -11,4 +11,4 @@ class HomePageCC extends Component {
   }
 };
 
-export default HomePageCC;
+export default MainPageCC;

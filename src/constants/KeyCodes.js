@@ -59,9 +59,48 @@ const keyCupsListOnTop = [
     keyCode: 48
   }
 ];
+//The keyCupsListOnLeftSide list needs for displaying left side buttons on Keypad component
+const keyCupsListOnLeftSide = [
+  {
+    label: "C"
+  },
+  {
+    label: "-",
+    keyCode: 189
+  },
+  {
+    label: "+",
+    keyCode: 187
+  },
+  {
+    label: ".",
+    keyCode: 190
+  }
+];
+//The keyCupsListOnRightSide list needs for displaying right side buttons on Keypad component
+const keyCupsListOnRightSide = [
+  {
+    label: "*",
+    keyCode: 56
+  },
+  {
+    label: "/",
+    keyCode: 191
+  },
+  {
+    label: "=",
+    keyCode: 13
+  },
+  {
+    label: "CE",
+    keyCode: 8
+  }
+];
 
 export {
   operators,
   digits,
-  usedKeyCodes
+  usedKeyCodes,
+  keyCupsListOnLeftSide,
+  keyCupsListOnRightSide
 };

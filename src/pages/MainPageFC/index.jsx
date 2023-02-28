@@ -1,6 +1,6 @@
 import { Calculator, Header } from '../../components'
 
-const HomePageFC = () => {
+const MainPageFC = () => {
   return (
       <div>
         <Header />
@@ -9,4 +9,4 @@ const HomePageFC = () => {
   );
 };
 
-export default HomePageFC;
+export default MainPageFC;

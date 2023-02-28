@@ -1,2 +1,2 @@
-export {default as HomePageCC} from './HomePageCC';
-export {default as HomePageFC} from './HomePageFC';
+export {default as MainPageCC} from './MainPageCC';
+export {default as MainPageFC} from './MainPageFC';

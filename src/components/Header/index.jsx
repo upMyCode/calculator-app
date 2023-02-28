@@ -26,7 +26,7 @@ const Header = () => {
             <NavbarHomeLink onClick={() => navigate("/")}>
               Home
             </NavbarHomeLink>
-            <NavbarSettingsLink onClick={() => navigate("/homepagecc")}>
+            <NavbarSettingsLink onClick={() => navigate("/mainpagecc")}>
               Settings
             </NavbarSettingsLink>
           </NavbarLinkElements>

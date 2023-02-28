@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Routes, BrowserRouter as Router, Route } from 'react-router-dom';
-import {HomePageFC, HomePageCC} from './pages';
+import {MainPageFC, MainPageCC} from './pages';
 import PATHS from './constants/Paths';
 
 const AppWrapper = styled.div`
@@ -13,12 +13,12 @@ const App = () => {
       <Router>
         <Routes>
           <Route
-              element={<HomePageFC/>}
-              path={PATHS.HOME_PAGE_FC}
+              element={<MainPageFC/>}
+              path={PATHS.MAIN_PAGE_FC}
           />
           <Route
-              element={<HomePageCC/>}
-              path={PATHS.HOME_PAGE_CC}
+              element={<MainPageCC/>}
+              path={PATHS.MAIN_PAGE_CC}
           />
         </Routes>
       </Router>

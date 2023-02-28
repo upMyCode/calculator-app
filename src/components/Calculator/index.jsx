@@ -1,10 +1,12 @@
 import React from 'react';
+import { CalculatorBlock } from "./styled";
+import {Display} from "../index";
 
 const Calculator = () => {
   return (
-      <div>
-        Calculator
-      </div>
+      <CalculatorBlock>
+        <Display />
+      </CalculatorBlock>
   );
 };
 
