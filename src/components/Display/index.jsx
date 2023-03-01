@@ -8,7 +8,7 @@ import {
 import ControlPanel from '../ControlPanel';
 import Keypad from '../Keypad';
 
-const Display = () => {
+const Display = ({ handleButtonPressed }) => {
   return (
       <DisplayBlock>
         <CalculatorWindowWrapper>
@@ -17,7 +17,7 @@ const Display = () => {
               4500.233
             </CalculatorExpression>
           </CalculatorWindow>
-          <Keypad />
+          <Keypad handleButtonPressed={handleButtonPressed}/>
         </CalculatorWindowWrapper>
         <ControlPanel />
       </DisplayBlock>

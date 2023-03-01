@@ -2,10 +2,10 @@ import React from 'react';
 import { CalculatorBlock } from "./styled";
 import {Display} from "../index";
 
-const Calculator = () => {
+const Calculator = ({ handleButtonPressed }) => {
   return (
       <CalculatorBlock>
-        <Display />
+        <Display handleButtonPressed={handleButtonPressed}/>
       </CalculatorBlock>
   );
 };

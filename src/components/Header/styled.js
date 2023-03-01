@@ -18,16 +18,25 @@ const NavbarList = styled.nav`
 const NavbarElement = styled.div`
   color: #FFFFFF;
   font: normal 32px Helvetica Neue;
+  @media (max-width: 1440px) {
+    font-size: 24px;
+  };
 `;
 
 const NavbarTitleElement = styled.p`
   color: #FFFFFF;
   font: normal 32px Helvetica Neue;
+  @media (max-width: 1440px) {
+    font-size: 24px;
+  };
 `;
 
 const NavbarLinkElements = styled.div`
   display: flex;
   font: normal 32px Helvetica Neue;
+  @media (max-width: 1440px) {
+    font-size: 24px;
+  };
 `;
 
 const NavbarHomeLink = styled.p`
@@ -42,7 +51,10 @@ const NavbarHomeLink = styled.p`
     border-bottom: 2px solid  #FFFFFF;
     cursor: pointer;
     margin-top: 2px;
-  }
+  };
+  @media (max-width: 1440px) {
+    font-size: 24px;
+  };
 `;
 
 const NavbarSettingsLink = styled.p`
@@ -58,7 +70,10 @@ const NavbarSettingsLink = styled.p`
     border-bottom: 2px solid  #FFFFFF;
     cursor: pointer;
     margin-top: 2px;
-  }
+  };
+  @media (max-width: 1440px) {
+    font-size: 24px;
+  };
 `;
 
 export {

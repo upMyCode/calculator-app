@@ -101,6 +101,7 @@ export {
   operators,
   digits,
   usedKeyCodes,
+  keyCupsListOnTop,
   keyCupsListOnLeftSide,
   keyCupsListOnRightSide
 };

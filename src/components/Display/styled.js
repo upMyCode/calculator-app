@@ -11,6 +11,9 @@ const CalculatorWindowWrapper = styled.div`
   width: 1443px;
   margin-left: 42.5px;
   margin-right: 23px;
+  @media (max-width: 1440px) {
+    width: 1082.25px;
+  };
 `;
 
 const CalculatorWindow = styled.div`
@@ -20,10 +23,14 @@ const CalculatorWindow = styled.div`
   height: 161.5px;
   border-bottom: 2px solid #707070;
 `
+
 const CalculatorExpression = styled.p`
   font: normal 64px Helvetica Neue;
   margin: 56px 114.5px 30.5px 0;
   color: #000000;
+  @media (max-width: 1440px) {
+    font-size: 48px;
+  };
 `;
 
 export {
