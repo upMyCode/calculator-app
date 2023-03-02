@@ -5,6 +5,9 @@ const DisplayBlock = styled.div`
   display: flex;
   padding-top: 23.5px;
   padding-bottom: 26.5px;
+  &:focus {
+    outline: none;
+  }
 `;
 
 const CalculatorWindowWrapper = styled.div`

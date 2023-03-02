@@ -1,28 +1,20 @@
 import styled from 'styled-components';
+import React from 'react';
 import { Routes, BrowserRouter as Router, Route } from 'react-router-dom';
-import {MainPageFC, MainPageCC} from './pages';
+import { MainPageFC, MainPageCC } from './pages';
 import PATHS from './constants/Paths';
 
 const AppWrapper = styled.div`
   width: 100%;
   height: 100vh;
-  &:focus {
-    outline: none;
-  }
 `
 const App = () => {
-  const handleButtonPressed = (keyCode, key) => {
-    console.log(keyCode, key);
-  }
   return (
-    <AppWrapper
-        onKeyDown={(event) => handleButtonPressed(event.keyCode, event.key)}
-        tabIndex={-1}
-    >
+    <AppWrapper>
       <Router>
         <Routes>
           <Route
-              element={<MainPageFC handleButtonPressed={handleButtonPressed}/>}
+              element={<MainPageFC />}
               path={PATHS.MAIN_PAGE_FC}
           />
           <Route

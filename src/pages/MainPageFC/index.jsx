@@ -1,10 +1,10 @@
 import { Calculator, Header } from '../../components'
 
-const MainPageFC = ({ handleButtonPressed }) => {
+const MainPageFC = () => {
   return (
       <div>
         <Header />
-        <Calculator handleButtonPressed={handleButtonPressed} />
+        <Calculator />
       </div>
   );
 };
