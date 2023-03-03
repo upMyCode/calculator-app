@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {
@@ -15,6 +15,7 @@ import expressionAction from "../../store/actions/expressionAction";
 const Display = () => {
   const dispatch = useDispatch();
   const expression = useSelector(state => state.expressionReducer.expression);
+  const [countOpenParentheses, setCountOpenParentheses] = useState(0);
 
   useEffect(() => {
     if (expression === "") {
@@ -28,12 +29,15 @@ const Display = () => {
 
     if (digits.includes(key)) {
       if (key === "0") {
+        const lastChar = expression.trim().slice(-1);
+
         if (expression === "0") return;
+        if (lastChar === ")") return;
       };
       if (expression !== "0") {
         dispatch(expressionAction(`${expression}${key}`));
       } else {
-        dispatch(expressionAction(key))
+        dispatch(expressionAction(key));
       };
     } else if (operators.includes(key)) {
       const lastChar = expression.trim().slice(-1);
@@ -44,18 +48,28 @@ const Display = () => {
 
       if (key === "(" || key === ")") {
         if (key === "(" && digits.includes(lastChar)) return;
-        if (key === "(" && lastChar === "(") return;
         if (key === ")" && lastChar === "(") return;
-        if (key === ")" && !digits.includes(lastChar)) return;
-
-        dispatch(expressionAction(`${expression} ${key} `));
+        if (key === "(" && lastChar === ")") return;
+        if (key === ")" && !digits.includes(lastChar) && lastChar !== ")") return;
+        if (key === ")" && digits.includes(lastChar)) {
+          if (countOpenParentheses === 0) return;
+          setCountOpenParentheses(prev => prev - 1);
+        };
+        if (key === ")" && operators.includes(lastChar)) {
+          if (countOpenParentheses === 0) return;
+          setCountOpenParentheses(prev => prev - 1);
+        };
+        if (key === "(") {
+          setCountOpenParentheses(prev => prev + 1);
+        }
+        dispatch(expressionAction(`${expression}${key}`));
       }
 
       if (operators.includes(lastChar)) {
         if (lastChar !== ")" && lastChar !== "(") return;
       };
 
-      dispatch(expressionAction(`${expression} ${key} `));
+      dispatch(expressionAction(`${expression}${key}`));
     }
 
     if (keyCode === 8) {
@@ -63,6 +77,14 @@ const Display = () => {
 
       const newExpression = expression.slice(0, -1);
       dispatch(expressionAction(`${newExpression}`));
+      const lastChar = expression.trim().slice(-1);
+
+      if (lastChar === "(" && countOpenParentheses > 0) {
+        setCountOpenParentheses(prev => prev - 1)
+      };
+      if (lastChar === ")") {
+        setCountOpenParentheses(prev => prev + 1)
+      };
     };
   };
 
