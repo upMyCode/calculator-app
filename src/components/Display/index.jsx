@@ -9,12 +9,14 @@ import {
 } from './styled';
 import ControlPanel from '../ControlPanel';
 import Keypad from '../Keypad';
-import { digits, operators, usedKeyCodes } from "../../constants/KeyCodes";
-import expressionAction from "../../store/actions/expressionAction";
+import { digits, operators, usedKeyCodes } from '../../constants/KeyCodes';
+import expressionAction from '../../store/actions/expressionAction';
+import resultAction from  '../../store/actions/resultAction';
 
 const Display = () => {
   const dispatch = useDispatch();
   const expression = useSelector(state => state.expressionReducer.expression);
+  const result = useSelector(state => state.resultReducer.result);
   const [countOpenParentheses, setCountOpenParentheses] = useState(0);
 
   useEffect(() => {
@@ -35,6 +37,9 @@ const Display = () => {
         if (lastChar === ")") return;
       };
       if (expression !== "0") {
+        const lastChar = expression.trim().slice(-1);
+
+        if (lastChar === ")") return;
         dispatch(expressionAction(`${expression}${key}`));
       } else {
         dispatch(expressionAction(key));
@@ -68,7 +73,7 @@ const Display = () => {
       if (operators.includes(lastChar)) {
         if (lastChar !== ")" && lastChar !== "(") return;
       };
-
+      console.log(key)
       dispatch(expressionAction(`${expression}${key}`));
     }
 
@@ -86,6 +91,12 @@ const Display = () => {
         setCountOpenParentheses(prev => prev + 1)
       };
     };
+
+    if (keyCode === 13) {
+      if (expression === "0") return;
+
+      dispatch(resultAction(expression));
+    }
   };
 
   return (
@@ -96,7 +107,8 @@ const Display = () => {
         <CalculatorWindowWrapper>
           <CalculatorWindow>
             <CalculatorExpression>
-              {expression}
+              <p>{expression}</p>
+              <p>{result}</p>
             </CalculatorExpression>
           </CalculatorWindow>
           <Keypad handleButtonPressed={handleButtonPressed}/>
