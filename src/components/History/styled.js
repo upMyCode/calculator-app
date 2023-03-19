@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 const HistoryBlock = styled.div`
-  width: 283.125px;
+  width: 377.5px;
   height: 910px;
 `;
 
 const HistoryTitle = styled.p`
   width: 100%;
   text-align: center;
+  margin-top: 7.5px;
   font: normal 32px Helvetica Neue;
   color: #000000;
   @media (max-width: 1440px) {
@@ -19,6 +20,13 @@ const HistoryOperationList = styled.div`
   width: 100%;
   max-height: 827px;
   overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 11px;
+  };
+  &::-webkit-scrollbar-thumb {
+    background-color: #434343;
+    border-radius: 8px;
+  };
 `;
 
 const HistoryOperationItem = styled.p`

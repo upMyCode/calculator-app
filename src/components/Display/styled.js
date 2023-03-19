@@ -3,11 +3,7 @@ import styled from 'styled-components';
 const DisplayBlock = styled.div`
   width: 100%;
   display: flex;
-  padding-top: 23.5px;
   padding-bottom: 26.5px;
-  &:focus {
-    outline: none;
-  }
 `;
 
 const CalculatorWindowWrapper = styled.div`

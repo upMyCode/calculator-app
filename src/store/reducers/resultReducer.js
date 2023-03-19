@@ -1,12 +1,6 @@
-import {restructurizationExpression} from "../../utils/restructurizationExpression";
-import {
-  Operation,
-  PlusOperation,
-  MinusOperation,
-  MultiplicationOperation,
-  DivisionOperation,
-  appResultState
-} from '../../utils/calculatationExecuter';
+import { mathExecuterHelper } from "../../utils/mathExecuterHelper";
+import { appResultState } from '../../utils/mathOperationExecuterHelper';
+
 const initialState = {
   result: ""
 }
@@ -23,35 +17,13 @@ const resultReducer = (state = initialState, action) => {
           result: allNumbersInExprList[0]
         }
       };
-      const restrExpr = restructurizationExpression(action.payload);
+      //To execute math expression
+      const applyMath = mathExecuterHelper();
+      applyMath(action.payload);
+      let result = appResultState.getResult();
 
-      for (let i = 0; i < restrExpr.length;i++) {
-        let operator = "";
-        //Searching the operator
-        for (let j = 0; j < restrExpr[0].length; j++) {
-          switch(restrExpr[0][j]) {
-            case "+": {
-              operator = restrExpr[0][j];
-              break;
-            }
-          }
-        }
-        console.log(operator)
-        switch(operator) {
-          case "+": {
-            const appState = new appResultState();
-
-            const schema = /\d+/g;
-            const match = restrExpr[0].match(schema);
-
-            for (let c = 0; c < match.length; c++) {
-             const plusOperation = new PlusOperation(appState, Number(match[c]));
-              plusOperation.execute();
-            }
-            console.log(appState.result);
-            break;
-          }
-        }
+      return {
+        result
       }
     }
     default: return state;

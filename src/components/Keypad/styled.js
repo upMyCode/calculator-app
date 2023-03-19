@@ -50,7 +50,7 @@ const KeypadLeftSideElement = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 45px 0;
+  margin: 22.5px 0;
   @media (max-width: 1440px) {
     width: 112.5px;
     height: 112.5px;
@@ -70,7 +70,7 @@ const KeypadRightSideElement = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 45px 0;
+  margin: 22.5px 0;
   @media (max-width: 1440px) {
     width: 112.5px;
     height: 112.5px;
@@ -90,7 +90,7 @@ const KeypadOnTopElement = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 45px 128px 45px 0;
+  margin: 22.5px 128px 22.5px 0;
   @media (max-width: 1440px) {
     width: 112.5px;
     height: 112.5px;
