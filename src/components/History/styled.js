@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const HistoryBlock = styled.div`
   width: 377.5px;
   height: 910px;
+  @media (max-width: 1440px) {
+    width: 283px;
+  };
 `;
 
 const HistoryTitle = styled.p`
