@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import {
   NavigationBlock,
@@ -9,30 +9,26 @@ import {
   NavbarHomeLink,
   NavbarSettingsLink,
   NavbarTitleElement
-} from "./styled";
+} from './styled'
 
 const Header = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
-      <NavigationBlock>
-        <NavbarList>
-          <NavbarElement>
-            <NavbarTitleElement>
-              Calculator App
-            </NavbarTitleElement>
-          </NavbarElement>
-          <NavbarLinkElements>
-            <NavbarHomeLink onClick={() => navigate("/")}>
-              Home
-            </NavbarHomeLink>
-            <NavbarSettingsLink onClick={() => navigate("/mainpagecc")}>
-              Settings
-            </NavbarSettingsLink>
-          </NavbarLinkElements>
-        </NavbarList>
-      </NavigationBlock>
-  );
-};
+    <NavigationBlock>
+      <NavbarList>
+        <NavbarElement>
+          <NavbarTitleElement>Calculator App</NavbarTitleElement>
+        </NavbarElement>
+        <NavbarLinkElements>
+          <NavbarHomeLink onClick={() => navigate('/')}>Home</NavbarHomeLink>
+          <NavbarSettingsLink onClick={() => navigate('/mainpagecc')}>
+            Settings
+          </NavbarSettingsLink>
+        </NavbarLinkElements>
+      </NavbarList>
+    </NavigationBlock>
+  )
+}
 
-export default Header;
+export default Header

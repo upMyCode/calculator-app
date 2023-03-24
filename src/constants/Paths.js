@@ -1,6 +1,6 @@
 const PATHS = {
-  MAIN_PAGE_FC: "/",
-  MAIN_PAGE_CC: "/mainpagecc",
+  MAIN_PAGE_FC: '/',
+  MAIN_PAGE_CC: '/mainpagecc'
 }
 
-export default PATHS;
+export default PATHS

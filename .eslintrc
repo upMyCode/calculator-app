@@ -1,0 +1,7 @@
+{
+  "extends": "standard",
+  "rules": {
+    "new-cap": 0,
+    "space-before-function-paren": "off"
+  }
+}

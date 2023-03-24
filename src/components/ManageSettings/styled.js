@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const ManageSettingsBlock = styled.div`
   width: 100%;
-`;
+`
 
 const ManageSettingsTitle = styled.h1`
   font-size: 64px;
@@ -10,7 +10,7 @@ const ManageSettingsTitle = styled.h1`
   letter-spacing: 0px;
   color: #000000;
   margin: 61px 0 46px 84px;
-`;
+`
 const ManagePanelLabel = styled.label`
   width: 153px;
   height: 28px;
@@ -20,19 +20,19 @@ const ManagePanelLabel = styled.label`
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
-`;
+`
 
 const ManagePanelBlock = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-`;
+`
 
 const ManagePanelPopUpMenu = styled.select`
   width: 401px;
   height: 93px;
   margin-left: 91px;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
   border: 2px solid #434343;
   border-radius: 8px;
   text-align: left;
@@ -48,17 +48,17 @@ const ManagePanelPopUpMenu = styled.select`
   //  -ms-appearance: none;
   //  appearance: none;
   //}
-`;
+`
 
 const ManagePanelPopUpElem = styled.option`
   width: 401px;
   height: 93px;
-`;
+`
 
 const ClearHistoryButton = styled.button`
   width: 401px;
   height: 93px;
-  background: #F2F2F2 0% 0% no-repeat padding-box;
+  background: #f2f2f2 0% 0% no-repeat padding-box;
   cursor: pointer;
   margin-left: 91px;
   margin-top: 32px;
@@ -71,9 +71,9 @@ const ClearHistoryButton = styled.button`
   color: #000000;
   opacity: 1;
   &:hover {
-    background: #C7C7C7 0% 0% no-repeat padding-box;
+    background: #c7c7c7 0% 0% no-repeat padding-box;
   }
-`;
+`
 
 export {
   ManageSettingsBlock,
@@ -83,4 +83,4 @@ export {
   ManagePanelPopUpElem,
   ClearHistoryButton,
   ManagePanelLabel
-};
+}

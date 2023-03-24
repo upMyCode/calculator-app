@@ -1,6 +1,6 @@
 const expressionAction = (calcStr) => ({
-  type: "SET_EXPRESSION",
+  type: 'SET_EXPRESSION',
   payload: calcStr
 })
 
-export default expressionAction;
+export default expressionAction

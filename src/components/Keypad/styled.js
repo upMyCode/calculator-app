@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const KeypadBlock = styled.div`
   width: 100%;
   display: flex;
-`;
+`
 
 const KeypadLeftSideBlock = styled.div`
   display: flex;
@@ -15,8 +15,8 @@ const KeypadLeftSideBlock = styled.div`
     width: 112.5px;
     margin-left: 66px;
     margin-right: 96px;
-  };
-`;
+  } ;
+`
 
 const KeypadRightSideBlock = styled.div`
   display: flex;
@@ -26,8 +26,8 @@ const KeypadRightSideBlock = styled.div`
   @media (max-width: 1440px) {
     width: 112.5px;
     margin-right: 68.625px;
-  };
-`;
+  } ;
+`
 
 const KeypadBlockOnTop = styled.div`
   display: flex;
@@ -35,13 +35,13 @@ const KeypadBlockOnTop = styled.div`
   width: 848px;
   @media (max-width: 1440px) {
     width: 636px;
-  };
-`;
+  } ;
+`
 
 const KeypadLeftSideElement = styled.div`
   width: 150px;
   height: 150px;
-  background: #F2F2F2 0% 0% no-repeat padding-box;
+  background: #f2f2f2 0% 0% no-repeat padding-box;
   border: 1px solid #707070;
   border-radius: 32px;
   font: normal 64px Helvetica Neue;
@@ -55,13 +55,13 @@ const KeypadLeftSideElement = styled.div`
     width: 112.5px;
     height: 112.5px;
     font-size: 48px;
-  };
-`;
+  } ;
+`
 
 const KeypadRightSideElement = styled.div`
   width: 150px;
   height: 150px;
-  background: #F2F2F2 0% 0% no-repeat padding-box;
+  background: #f2f2f2 0% 0% no-repeat padding-box;
   border: 1px solid #707070;
   border-radius: 32px;
   font: normal 64px Helvetica Neue;
@@ -75,13 +75,13 @@ const KeypadRightSideElement = styled.div`
     width: 112.5px;
     height: 112.5px;
     font-size: 48px;
-  };
-`;
+  } ;
+`
 
 const KeypadOnTopElement = styled.div`
   width: 150px;
   height: 150px;
-  background: #F2F2F2 0% 0% no-repeat padding-box;
+  background: #f2f2f2 0% 0% no-repeat padding-box;
   border: 1px solid #707070;
   border-radius: 32px;
   font: normal 64px Helvetica Neue;
@@ -96,8 +96,8 @@ const KeypadOnTopElement = styled.div`
     height: 112.5px;
     margin-right: 96px;
     font-size: 48px;
-  };
-`;
+  } ;
+`
 
 export {
   KeypadBlock,
@@ -107,4 +107,4 @@ export {
   KeypadBlockOnTop,
   KeypadRightSideBlock,
   KeypadRightSideElement
-};
+}

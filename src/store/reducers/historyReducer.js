@@ -4,14 +4,14 @@ const initialState = {
 
 const historyReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "SET_HISTORY": {
+    case 'SET_HISTORY': {
       return {
         operationHistory: state.operationHistory.concat(action.payload)
       }
     }
     default:
-      return state;
+      return state
   }
 }
 
-export default historyReducer;
+export default historyReducer

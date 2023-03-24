@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const DisplayBlock = styled.div`
   width: 100%;
   display: flex;
   padding-bottom: 26.5px;
-`;
+`
 
 const CalculatorWindowWrapper = styled.div`
   width: 1443px;
@@ -12,8 +12,8 @@ const CalculatorWindowWrapper = styled.div`
   margin-right: 23px;
   @media (max-width: 1440px) {
     width: 1082.25px;
-  };
-`;
+  } ;
+`
 
 const CalculatorWindow = styled.div`
   display: flex;
@@ -31,12 +31,12 @@ const CalculatorExpression = styled.p`
   flex-direction: column;
   @media (max-width: 1440px) {
     font-size: 48px;
-  };
-`;
+  } ;
+`
 
 export {
   DisplayBlock,
   CalculatorWindow,
   CalculatorExpression,
   CalculatorWindowWrapper
-};
+}

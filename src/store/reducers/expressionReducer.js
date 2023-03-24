@@ -1,18 +1,17 @@
 const initialState = {
-  expression: "0",
-};
+  expression: '0'
+}
 
-//This reducer set expression on calculator
+//  This reducer set expression on calculator
 const expressionReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "SET_EXPRESSION":
+    case 'SET_EXPRESSION':
       return {
         expression: action.payload
       }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default expressionReducer;
-
+export default expressionReducer
