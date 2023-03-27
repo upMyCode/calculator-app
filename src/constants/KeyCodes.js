@@ -5,7 +5,7 @@ const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 //  The usedKeyCodes list needs for handleKeyPressed function for defining all symbols and digits for calculation process
 const usedKeyCodes = [
   49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 187, 189, 8, 191, 13, 190, 96, 97, 98,
-  99, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 111
+  99, 100, 101, 102, 103, 104, 105, 106, 107, 109, 110, 111, 67
 ]
 //  The keyCupsListOnTop list needs for displaying top buttons on Keypad component
 const keyCupsListOnTop = [
@@ -61,7 +61,8 @@ const keyCupsListOnTop = [
 //  The keyCupsListOnLeftSide list needs for displaying left side buttons on Keypad component
 const keyCupsListOnLeftSide = [
   {
-    label: 'C'
+    label: 'C',
+    keyCode: 67
   },
   {
     label: '-',

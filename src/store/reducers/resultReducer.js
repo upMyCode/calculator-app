@@ -1,5 +1,6 @@
 import { mathExecuterHelper } from '../../utils/mathExecuterHelper'
 import { appResultState } from '../../utils/mathOperationExecuterHelper'
+import { addAccuracyForExpression } from '../../utils/addAccuracyForExpression'
 
 const initialState = {
   result: ''
@@ -10,9 +11,9 @@ const resultReducer = (state = initialState, action) => {
     case 'SET_RESULT': {
       const schema = /\d*/g
       const allNumbersInExprList = action.payload.match(schema)
-      const isOnlyOneNumber = allNumbersInExprList.length === 1 ? true : false
+      const valueOfNumbers = allNumbersInExprList.length
       //  To check the expression of a calculator on a single number in an expression
-      if (isOnlyOneNumber) {
+      if (valueOfNumbers === 1) {
         return {
           result: allNumbersInExprList[0]
         }
@@ -20,7 +21,9 @@ const resultReducer = (state = initialState, action) => {
       //  To execute math expression
       const applyMath = mathExecuterHelper()
       applyMath(action.payload)
+
       let result = appResultState.getResult()
+      result = addAccuracyForExpression(result, 3)
 
       return {
         result

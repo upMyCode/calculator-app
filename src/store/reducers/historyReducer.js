@@ -9,6 +9,10 @@ const historyReducer = (state = initialState, action) => {
         operationHistory: state.operationHistory.concat(action.payload)
       }
     }
+    case 'CLEAR_HISTORY':
+      return {
+        operationHistory: []
+      }
     default:
       return state
   }

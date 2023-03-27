@@ -3,10 +3,11 @@ import { Header, ManageSettings } from '../../components'
 
 class MainPageCC extends Component {
   render() {
+    const { dispatch } = this.props
     return (
       <>
         <Header />
-        <ManageSettings />
+        <ManageSettings dispatch={dispatch} />
       </>
     )
   }

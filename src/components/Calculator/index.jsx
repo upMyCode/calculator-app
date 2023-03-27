@@ -71,9 +71,21 @@ const Calculator = () => {
       if (operators.includes(lastChar)) {
         if (lastChar !== ')' && lastChar !== '(') return
       }
-      console.log(key)
+
       dispatch(expressionAction(`${expression}${key}`))
       dispatch(resultAction(''))
+    }
+
+    if (key === '.') {
+      const lastChar = expression.slice(-1)
+      const schema = /\d+\./g
+
+      const valueOfPeriod = expression.match(schema)
+      console.log(valueOfPeriod)
+      if (valueOfPeriod > 1) return
+      if (!digits.includes(lastChar)) return
+
+      dispatch(expressionAction(`${expression}${key}`))
     }
 
     if (keyCode === 8) {
@@ -98,6 +110,11 @@ const Calculator = () => {
 
       dispatch(resultAction(expression))
       dispatch(historyAction(expression))
+    }
+
+    if (keyCode === 67) {
+      dispatch(expressionAction('0'))
+      dispatch(resultAction(''))
     }
   }
 
