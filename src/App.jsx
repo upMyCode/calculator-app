@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { useDispatch } from 'react-redux'
+import styled, { ThemeProvider } from 'styled-components'
+import { useDispatch, useSelector } from 'react-redux'
 import React from 'react'
 import { Routes, BrowserRouter as Router, Route } from 'react-router-dom'
 import { MainPageFC, MainPageCC } from './pages'
@@ -11,19 +11,26 @@ const AppWrapper = styled.div`
 `
 const App = () => {
   const dispatch = useDispatch()
+  const globalThemeColor = useSelector(
+    (state) => state.globalThemeReducer.globalThemeColor
+  )
 
+  console.log(globalThemeColor)
   return (
-    <AppWrapper>
-      <Router>
-        <Routes>
-          <Route element={<MainPageFC />} path={PATHS.MAIN_PAGE_FC} />
-          <Route
-            element={<MainPageCC dispatch={dispatch} />}
-            path={PATHS.MAIN_PAGE_CC}
-          />
-        </Routes>
-      </Router>
-    </AppWrapper>
+    <ThemeProvider theme={{ globalThemeColor }}>
+      <AppWrapper>
+        <Router>
+          <Routes>
+            <Route element={<MainPageFC />} path={PATHS.MAIN_PAGE_FC} />
+            <Route
+              element={<MainPageCC dispatch={dispatch} />}
+              path={PATHS.MAIN_PAGE_CC}
+            />
+          </Routes>
+        </Router>
+      </AppWrapper>
+      /
+    </ThemeProvider>
   )
 }
 

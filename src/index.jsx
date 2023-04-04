@@ -12,14 +12,13 @@ const Global = createGlobalStyle`
     box-sizing: border-box;
   }
 `
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <>
-        <Global />
-        <App />
-      </>
+      <Global />
+      <App />
     </Provider>
   </React.StrictMode>
 )
