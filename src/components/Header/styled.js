@@ -3,7 +3,8 @@ import styled from 'styled-components'
 const NavigationBlock = styled.div`
   width: 100%;
   height: 120px;
-  background-color: #434343;
+  background-color: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme' ? '#434343' : '#663ec1'};
   padding: 0 32px 0 32px;
 `
 

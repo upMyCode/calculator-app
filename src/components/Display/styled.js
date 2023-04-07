@@ -26,7 +26,8 @@ const CalculatorWindow = styled.div`
 const CalculatorExpression = styled.p`
   font: normal 64px Helvetica Neue;
   margin: 56px 114.5px 30.5px 0;
-  color: #000000;
+  color: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   display: flex;
   flex-direction: column;
   @media (max-width: 1440px) {

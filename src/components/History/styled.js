@@ -14,7 +14,8 @@ const HistoryTitle = styled.p`
   text-align: center;
   margin-top: 7.5px;
   font: normal 32px Helvetica Neue;
-  color: #000000;
+  color: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   @media (max-width: 1440px) {
     font-size: 24px;
   } ;
@@ -35,7 +36,8 @@ const HistoryOperationList = styled.div`
 
 const HistoryOperationItem = styled.p`
   font: normal 30px Helvetica Neue;
-  color: #000000;
+  color: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   margin: 50px 0 50px 40.125px;
   @media (max-width: 1440px) {
     font-size: 22.5px;

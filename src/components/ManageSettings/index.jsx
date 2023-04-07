@@ -38,7 +38,10 @@ class ManageSettings extends React.Component {
         <ManagePanelLabel>Switch Theme</ManagePanelLabel>
         <ManagePanelBlock>
           <ManagePanelPopUpMenuWrapper>
-            <ManagePanelPopUpMenu onClick={this.handleThemeSwitcher}>
+            <ManagePanelPopUpMenu
+              isSwitcherThemeActive={this.state.isSwitcherThemeActive}
+              onClick={this.handleThemeSwitcher}
+            >
               {this.state.themeColor}
             </ManagePanelPopUpMenu>
             {this.state.isSwitcherThemeActive && (

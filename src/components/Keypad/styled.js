@@ -41,11 +41,15 @@ const KeypadBlockOnTop = styled.div`
 const KeypadLeftSideElement = styled.div`
   width: 150px;
   height: 150px;
-  background: #f2f2f2 0% 0% no-repeat padding-box;
+  background: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme'
+      ? '#f2f2f2 0% 0% no-repeat padding-box;'
+      : '0% 0% no-repeat padding-box #2D2D2D;'};
   border: 1px solid #707070;
   border-radius: 32px;
   font: normal 64px Helvetica Neue;
-  color: #000000;
+  color: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,11 +65,15 @@ const KeypadLeftSideElement = styled.div`
 const KeypadRightSideElement = styled.div`
   width: 150px;
   height: 150px;
-  background: #f2f2f2 0% 0% no-repeat padding-box;
+  background: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme'
+      ? '#f2f2f2 0% 0% no-repeat padding-box;'
+      : '0% 0% no-repeat padding-box #2D2D2D;'};
   border: 1px solid #707070;
   border-radius: 32px;
   font: normal 64px Helvetica Neue;
-  color: #000000;
+  color: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,11 +89,15 @@ const KeypadRightSideElement = styled.div`
 const KeypadOnTopElement = styled.div`
   width: 150px;
   height: 150px;
-  background: #f2f2f2 0% 0% no-repeat padding-box;
+  background: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme'
+      ? '#f2f2f2 0% 0% no-repeat padding-box;'
+      : '0% 0% no-repeat padding-box #2D2D2D;'};
   border: 1px solid #707070;
   border-radius: 32px;
   font: normal 64px Helvetica Neue;
-  color: #000000;
+  color: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   display: flex;
   align-items: center;
   justify-content: center;
