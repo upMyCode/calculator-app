@@ -8,16 +8,26 @@ import PATHS from './constants/Paths'
 const AppWrapper = styled.div`
   width: 100%;
   height: 100vh;
+  background-color: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme' ? '#FFFFFF;' : '#161616;'};
 `
 const App = () => {
   const dispatch = useDispatch()
   const globalThemeColor = useSelector(
     (state) => state.globalThemeReducer.globalThemeColor
   )
+  const appResizingResolutionWindow = {
+    ExtraMegaResolution: '(max-width: 1919px) and (min-width: 1680px)',
+    SemiMegaResolution: '(max-width: 1679px) and (min-width: 1441px)',
+    MegaLargeResolution: '(max-width: 1440px) and (min-width: 1201px)',
+    ExtraLargeResolution: '(max-width: 1200px) and (min-width: 993px)',
+    LargeResolution: '(max-width: 992px) and (min-width: 769px)',
+    MediumResolution: '(max-width: 768px) and (min-width: 577px)'
+  }
 
   console.log(globalThemeColor)
   return (
-    <ThemeProvider theme={{ globalThemeColor }}>
+    <ThemeProvider theme={{ globalThemeColor, appResizingResolutionWindow }}>
       <AppWrapper>
         <Router>
           <Routes>
@@ -29,7 +39,6 @@ const App = () => {
           </Routes>
         </Router>
       </AppWrapper>
-      /
     </ThemeProvider>
   )
 }

@@ -19,24 +19,39 @@ const NavbarList = styled.nav`
 const NavbarElement = styled.div`
   color: #ffffff;
   font: normal 32px Helvetica Neue;
-  @media (max-width: 1440px) {
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
     font-size: 24px;
+  }
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+    font-size: 28px;
   } ;
 `
 
 const NavbarTitleElement = styled.p`
   color: #ffffff;
   font: normal 32px Helvetica Neue;
-  @media (max-width: 1440px) {
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
     font-size: 24px;
+  }
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+    font-size: 28px;
   } ;
 `
 
 const NavbarLinkElements = styled.div`
   display: flex;
   font: normal 32px Helvetica Neue;
-  @media (max-width: 1440px) {
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
     font-size: 24px;
+  }
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+    font-size: 28px;
   } ;
 `
 
@@ -53,8 +68,13 @@ const NavbarHomeLink = styled.p`
     cursor: pointer;
     margin-top: 2px;
   }
-  @media (max-width: 1440px) {
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
     font-size: 24px;
+  }
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+    font-size: 28px;
   } ;
 `
 
@@ -72,8 +92,13 @@ const NavbarSettingsLink = styled.p`
     cursor: pointer;
     margin-top: 2px;
   }
-  @media (max-width: 1440px) {
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
     font-size: 24px;
+  }
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+    font-size: 28px;
   } ;
 `
 

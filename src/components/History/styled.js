@@ -3,9 +3,15 @@ import styled from 'styled-components'
 const HistoryBlock = styled.div`
   width: 377.5px;
   height: 910px;
-  @media (max-width: 1440px) {
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
     width: 283px;
     height: 682.5px;
+  }
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+    width: 330px;
+    height: 796.25px;
   } ;
 `
 
@@ -16,8 +22,13 @@ const HistoryTitle = styled.p`
   font: normal 32px Helvetica Neue;
   color: ${(props) =>
     props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
-  @media (max-width: 1440px) {
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
     font-size: 24px;
+  }
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+    font-size: 28px;
   } ;
 `
 
@@ -39,8 +50,13 @@ const HistoryOperationItem = styled.p`
   color: ${(props) =>
     props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   margin: 50px 0 50px 40.125px;
-  @media (max-width: 1440px) {
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
     font-size: 22.5px;
+  }
+  @media ${(props) =>
+      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+    font-size: 26.25px;
   } ;
 `
 
