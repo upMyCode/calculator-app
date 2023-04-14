@@ -3,6 +3,14 @@ import styled from 'styled-components'
 const HistoryBlock = styled.div`
   width: 377.5px;
   height: 910px;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    width: 503px;
+    height: 1213px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    width: 403px;
+    height: 971px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     width: 283px;
     height: 682.5px;
@@ -32,6 +40,12 @@ const HistoryTitle = styled.p`
   font: normal 32px Helvetica Neue;
   color: ${(props) =>
     props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    font-size: 43px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    font-size: 34px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;
   }
@@ -67,6 +81,12 @@ const HistoryOperationItem = styled.p`
   color: ${(props) =>
     props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   margin: 50px 0 50px 40.125px;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    font-size: 40px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    font-size: 32px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 22.5px;
   }

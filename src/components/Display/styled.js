@@ -10,6 +10,12 @@ const CalculatorWindowWrapper = styled.div`
   width: 1443px;
   margin-left: 42.5px;
   margin-right: 23px;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    width: 1924px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    width: 1540px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     width: 1082.25px;
   }
@@ -42,6 +48,12 @@ const CalculatorExpression = styled.p`
     props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   display: flex;
   flex-direction: column;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    font-size: 85px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    font-size: 68px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 48px;
   }

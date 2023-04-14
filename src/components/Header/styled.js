@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 const NavigationBlock = styled.div`
   width: 100%;
-  height: 120px;
   background-color: ${(props) =>
     props.theme.globalThemeColor === 'Light theme' ? '#434343' : '#663ec1'};
   padding: 0 32px 0 32px;
@@ -11,6 +10,27 @@ const NavigationBlock = styled.div`
 const NavbarList = styled.nav`
   width: 100%;
   height: 120px;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    height: 160px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    height: 128px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
+    height: 90px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.WSXGA} {
+    height: 105px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.UXGA} {
+    height: 100px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.SXGA} {
+    height: 80px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.XGA} {
+    height: 64px;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +39,13 @@ const NavbarList = styled.nav`
 const NavbarElement = styled.div`
   color: #ffffff;
   font: normal 32px Helvetica Neue;
+  margin-right: 23px;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    font-size: 43px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    font-size: 34px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;
   }
@@ -39,6 +66,12 @@ const NavbarElement = styled.div`
 const NavbarTitleElement = styled.p`
   color: #ffffff;
   font: normal 32px Helvetica Neue;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    font-size: 43px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    font-size: 34px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;
   }
@@ -59,6 +92,12 @@ const NavbarTitleElement = styled.p`
 const NavbarLinkElements = styled.div`
   display: flex;
   font: normal 32px Helvetica Neue;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    font-size: 43px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    font-size: 34px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;
   }
@@ -88,6 +127,12 @@ const NavbarHomeLink = styled.p`
     border-bottom: 2px solid #ffffff;
     cursor: pointer;
     margin-top: 2px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    font-size: 43px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    font-size: 34px;
   }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;
@@ -119,6 +164,12 @@ const NavbarSettingsLink = styled.p`
     border-bottom: 2px solid #ffffff;
     cursor: pointer;
     margin-top: 2px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    font-size: 43px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    font-size: 34px;
   }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;

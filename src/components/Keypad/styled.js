@@ -11,6 +11,16 @@ const KeypadLeftSideBlock = styled.div`
   width: 150px;
   margin-right: 128px;
   margin-left: 88px;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    width: 200px;
+    margin-left: 117px;
+    margin-right: 171px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    width: 160px;
+    margin-left: 94px;
+    margin-right: 137px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     width: 112.5px;
     margin-left: 66px;
@@ -43,6 +53,14 @@ const KeypadRightSideBlock = styled.div`
   flex-direction: column;
   width: 150px;
   margin-right: 91.5px;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    width: 200px;
+    margin-right: 122px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    width: 160px;
+    margin-right: 98px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     width: 112.5px;
     margin-right: 68.625px;
@@ -69,6 +87,12 @@ const KeypadBlockOnTop = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 848px;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    width: 1131px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    width: 905px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     width: 636px;
   }
@@ -103,6 +127,16 @@ const KeypadLeftSideElement = styled.div`
   justify-content: center;
   cursor: pointer;
   margin: 22.5px 0;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    width: 200px;
+    height: 200px;
+    font-size: 85px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    width: 160px;
+    height: 160px;
+    font-size: 68px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     width: 112.5px;
     height: 112.5px;
@@ -147,6 +181,16 @@ const KeypadRightSideElement = styled.div`
   justify-content: center;
   cursor: pointer;
   margin: 22.5px 0;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    width: 200px;
+    height: 200px;
+    font-size: 85px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    width: 160px;
+    height: 160px;
+    font-size: 68px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     width: 112.5px;
     height: 112.5px;
@@ -191,6 +235,18 @@ const KeypadOnTopElement = styled.div`
   justify-content: center;
   cursor: pointer;
   margin: 22.5px 128px 22.5px 0;
+  @media ${(props) => props.theme.appResizingResolutionWindow.QHD} {
+    width: 200px;
+    height: 200px;
+    font-size: 85px;
+    margin-right: 171px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.QWXGA} {
+    width: 160px;
+    height: 160px;
+    font-size: 68px;
+    margin-right: 137px;
+  }
   @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     width: 112.5px;
     height: 112.5px;

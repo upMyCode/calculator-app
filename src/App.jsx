@@ -17,6 +17,8 @@ const App = () => {
     (state) => state.globalThemeReducer.globalThemeColor
   )
   const appResizingResolutionWindow = {
+    QHD: '(min-width: 2560px)',
+    QWXGA: '(max-width: 2559px) and (min-width: 2048px)',
     WSXGA: '(max-width: 1919px) and (min-width: 1680px)',
     UXGA: '(max-width: 1679px) and (min-width: 1600px)',
     WXGA: '(max-width: 1599px) and (min-width: 1440px)',
