@@ -17,12 +17,11 @@ const App = () => {
     (state) => state.globalThemeReducer.globalThemeColor
   )
   const appResizingResolutionWindow = {
-    ExtraMegaResolution: '(max-width: 1919px) and (min-width: 1680px)',
-    SemiMegaResolution: '(max-width: 1679px) and (min-width: 1441px)',
-    MegaLargeResolution: '(max-width: 1440px) and (min-width: 1201px)',
-    ExtraLargeResolution: '(max-width: 1200px) and (min-width: 993px)',
-    LargeResolution: '(max-width: 992px) and (min-width: 769px)',
-    MediumResolution: '(max-width: 768px) and (min-width: 577px)'
+    WSXGA: '(max-width: 1919px) and (min-width: 1680px)',
+    UXGA: '(max-width: 1679px) and (min-width: 1600px)',
+    WXGA: '(max-width: 1599px) and (min-width: 1440px)',
+    SXGA: '(max-width: 1439px) and (min-width: 1280px)',
+    XGA: '(max-width: 1279px) and (min-width: 1024px)'
   }
 
   console.log(globalThemeColor)

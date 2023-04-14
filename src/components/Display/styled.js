@@ -10,13 +10,20 @@ const CalculatorWindowWrapper = styled.div`
   width: 1443px;
   margin-left: 42.5px;
   margin-right: 23px;
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     width: 1082.25px;
   }
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WSXGA} {
     width: 1262.6px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.UXGA} {
+    width: 1202.5px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.SXGA} {
+    width: 962px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.XGA} {
+    width: 770px;
   } ;
 `
 
@@ -35,13 +42,20 @@ const CalculatorExpression = styled.p`
     props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   display: flex;
   flex-direction: column;
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 48px;
   }
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WSXGA} {
     font-size: 56px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.UXGA} {
+    font-size: 53px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.SXGA} {
+    font-size: 43px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.XGA} {
+    font-size: 34px;
   } ;
 `
 

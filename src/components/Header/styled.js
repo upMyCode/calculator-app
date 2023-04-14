@@ -19,39 +19,60 @@ const NavbarList = styled.nav`
 const NavbarElement = styled.div`
   color: #ffffff;
   font: normal 32px Helvetica Neue;
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;
   }
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WSXGA} {
     font-size: 28px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.UXGA} {
+    font-size: 27px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.SXGA} {
+    font-size: 21px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.XGA} {
+    font-size: 17px;
   } ;
 `
 
 const NavbarTitleElement = styled.p`
   color: #ffffff;
   font: normal 32px Helvetica Neue;
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;
   }
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WSXGA} {
     font-size: 28px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.UXGA} {
+    font-size: 27px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.SXGA} {
+    font-size: 21px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.XGA} {
+    font-size: 17px;
   } ;
 `
 
 const NavbarLinkElements = styled.div`
   display: flex;
   font: normal 32px Helvetica Neue;
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;
   }
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WSXGA} {
     font-size: 28px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.UXGA} {
+    font-size: 27px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.SXGA} {
+    font-size: 21px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.XGA} {
+    font-size: 17px;
   } ;
 `
 
@@ -68,13 +89,20 @@ const NavbarHomeLink = styled.p`
     cursor: pointer;
     margin-top: 2px;
   }
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;
   }
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WSXGA} {
     font-size: 28px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.UXGA} {
+    font-size: 27px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.SXGA} {
+    font-size: 21px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.XGA} {
+    font-size: 17px;
   } ;
 `
 
@@ -92,13 +120,20 @@ const NavbarSettingsLink = styled.p`
     cursor: pointer;
     margin-top: 2px;
   }
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.MegaLargeResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WXGA} {
     font-size: 24px;
   }
-  @media ${(props) =>
-      props.theme.appResizingResolutionWindow.ExtraMegaResolution} {
+  @media ${(props) => props.theme.appResizingResolutionWindow.WSXGA} {
     font-size: 28px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.UXGA} {
+    font-size: 27px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.SXGA} {
+    font-size: 21px;
+  }
+  @media ${(props) => props.theme.appResizingResolutionWindow.XGA} {
+    font-size: 17px;
   } ;
 `
 

@@ -75,7 +75,6 @@ const ManagePanelPopUpMenu = styled.div`
     props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#ffffff;'};
   padding-left: 27px;
   cursor: pointer;
-  // border-bottom-color: transparent;
 `
 const ManagePanelPopUpList = styled.ul`
   width: 401px;
