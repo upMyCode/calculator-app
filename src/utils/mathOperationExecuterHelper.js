@@ -2,7 +2,8 @@ class Operation {
   constructor(appResultState) {
     this.appResultState = appResultState
   }
-  //Default executor
+  // Default executor
+
   execute() {
     throw new Error("You didn't execute operation")
   }
@@ -14,6 +15,7 @@ class PlusOperation extends Operation {
     this.firstValue = firstValue
     this.secondValue = secondValue
   }
+
   execute() {
     console.log(this.firstValue, this.secondValue)
     this.appResultState.intermediateResult = this.firstValue + this.secondValue
@@ -26,6 +28,7 @@ class MinusOperation extends Operation {
     this.firstValue = firstValue
     this.secondValue = secondValue
   }
+
   execute() {
     this.appResultState.intermediateResult = this.firstValue - this.secondValue
   }
@@ -37,6 +40,7 @@ class MultiplicationOperation extends Operation {
     this.firstValue = firstValue
     this.secondValue = secondValue
   }
+
   execute() {
     this.appResultState.intermediateResult = this.firstValue * this.secondValue
   }
@@ -48,6 +52,7 @@ class DivisionOperation extends Operation {
     this.firstValue = firstValue
     this.secondValue = secondValue
   }
+
   execute() {
     this.appResultState.intermediateResult = this.firstValue / this.secondValue
   }

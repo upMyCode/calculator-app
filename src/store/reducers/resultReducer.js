@@ -20,7 +20,13 @@ const resultReducer = (state = initialState, action) => {
       }
       //  To execute math expression
       const applyMath = mathExecuterHelper()
-      applyMath(action.payload)
+      const error = applyMath(action.payload)
+
+      if (error) {
+        return {
+          result: error
+        }
+      }
 
       let result = appResultState.getResult()
       result = addAccuracyForExpression(result, 3)

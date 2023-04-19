@@ -12,7 +12,11 @@ export const mathExecuterHelper = () => {
   return applyMath
 
   function applyMath(mathStr) {
-    throwUnmatchedScopes(mathStr)
+    const error = throwUnmatchedScopes(mathStr)
+
+    if (error) {
+      return error
+    }
 
     mathStr = deepRemoveScopes(mathStr)
     mathStr = autoCorrect(mathStr)
@@ -111,7 +115,7 @@ export const mathExecuterHelper = () => {
     const scopesClose = (mathStr.match(/\)/g) || []).length
 
     if (scopesOpen !== scopesClose) {
-      throw new Error('Unmatched parenthesis at ' + mathStr)
+      return 'Parenthesis error'
     }
   }
 

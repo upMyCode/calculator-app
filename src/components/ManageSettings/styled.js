@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 
 const ManageSettingsBlock = styled.div`
   width: 100%;
-  height: 100vh;
   background-color: ${(props) =>
     props.theme.globalThemeColor === 'Light theme' ? '#FFFFFF;' : '#161616;'};
 `
