@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import expressionAction from '../../store/actions/expressionAction'
 import resultAction from '../../store/actions/resultAction'
@@ -14,7 +14,8 @@ import {
   ErrorBoundaryFallback,
   ControlPanel,
   Keypad,
-  Expression
+  Expression,
+  Sidebar
 } from '../../components'
 
 const Display = ({ handleButtonPressed }) => {
@@ -22,6 +23,7 @@ const Display = ({ handleButtonPressed }) => {
   const result = useSelector((state) => state.resultReducer.result)
   const error = useSelector((state) => state.errorReducer.errorMessage)
   const dispatch = useDispatch()
+  const [isSidebarVisible, setSidebarVisible] = useState(false)
 
   useEffect(() => {
     const hasResult = Number(result)
@@ -33,7 +35,7 @@ const Display = ({ handleButtonPressed }) => {
 
   return (
     <DisplayBlock>
-      <CalculatorWindowWrapper>
+      <CalculatorWindowWrapper isSidebarVisible={isSidebarVisible}>
         <CalculatorWindow>
           <CalculatorExpression>
             <ErrorBoundary
@@ -54,7 +56,10 @@ const Display = ({ handleButtonPressed }) => {
         </CalculatorWindow>
         <Keypad handleButtonPressed={handleButtonPressed} />
       </CalculatorWindowWrapper>
-      <ControlPanel />
+      {!isSidebarVisible && (
+        <ControlPanel setSidebarVisible={setSidebarVisible} />
+      )}
+      {isSidebarVisible && <Sidebar setSidebarVisible={setSidebarVisible} />}
     </DisplayBlock>
   )
 }

@@ -2,9 +2,9 @@ import React from 'react'
 import History from '../History'
 import { ControlPanelBlock } from './styled'
 
-const ControlPanel = () => {
+const ControlPanel = ({ setSidebarVisible }) => {
   return (
-    <ControlPanelBlock>
+    <ControlPanelBlock onClick={() => setSidebarVisible((prev) => !prev)}>
       <History />
     </ControlPanelBlock>
   )

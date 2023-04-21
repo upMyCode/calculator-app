@@ -10,10 +10,14 @@ const ErrorResetter = styled.button`
   width: 45px;
   height: 45px;
   padding: 10px;
-  border: 1px solid #000000;
+  border:${(props) =>
+    props.theme.globalThemeColor === 'Light theme'
+      ? '1px solid #000000'
+      : '1px solid #FFFFFF'};
   border-radius: 6px;
   margin-left: 30px;
-  color: #000000;
+  color: ${(props) =>
+    props.theme.globalThemeColor === 'Light theme' ? '#000000;' : '#FFFFFF;'};
   cursor: pointer;
   margin-top: 8px;
   &:hover { 
