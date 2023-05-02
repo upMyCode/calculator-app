@@ -20,6 +20,7 @@ const Keypad = ({ handleButtonPressed }) => {
       <KeypadLeftSideBlock>
         {keyCupsListOnLeftSide.map((item, id) => (
           <KeypadLeftSideElement
+            data-test-target={`keypad-element-with-keycup-${item.label}`}
             onClick={() => handleButtonPressed(item.keyCode, item.label)}
             key={id}
           >
@@ -30,6 +31,7 @@ const Keypad = ({ handleButtonPressed }) => {
       <KeypadBlockOnTop>
         {keyCupsListOnTop.map((item, id) => (
           <KeypadOnTopElement
+            data-test-target={`keypad-element-with-keycup-${item.label}`}
             onClick={() => handleButtonPressed(item.keyCode, item.label)}
             key={id}
           >
@@ -40,6 +42,7 @@ const Keypad = ({ handleButtonPressed }) => {
       <KeypadRightSideBlock>
         {keyCupsListOnRightSide.map((item, id) => (
           <KeypadRightSideElement
+            data-test-target={`keypad-element-with-keycup-${item.label}`}
             onClick={() => handleButtonPressed(item.keyCode, item.label)}
             key={id}
           >

@@ -18,11 +18,21 @@ const Header = () => {
     <NavigationBlock>
       <NavbarList>
         <NavbarElement>
-          <NavbarTitleElement>Calculator App</NavbarTitleElement>
+          <NavbarTitleElement data-test-target="nav-bar-title">
+            Calculator App
+          </NavbarTitleElement>
         </NavbarElement>
         <NavbarLinkElements>
-          <NavbarHomeLink onClick={() => navigate('/')}>Home</NavbarHomeLink>
-          <NavbarSettingsLink onClick={() => navigate('/mainpagecc')}>
+          <NavbarHomeLink
+            data-test-target="nav-link-home"
+            onClick={() => navigate('/')}
+          >
+            Home
+          </NavbarHomeLink>
+          <NavbarSettingsLink
+            data-test-target="nav-link-settings"
+            onClick={() => navigate('/mainpagecc')}
+          >
             Settings
           </NavbarSettingsLink>
         </NavbarLinkElements>

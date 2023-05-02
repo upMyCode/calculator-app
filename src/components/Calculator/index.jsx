@@ -44,11 +44,12 @@ const Calculator = () => {
       const lastChar = expression.trim().slice(-1)
 
       if (lastChar === '.') return
-      if (expression === '0' && key === ')') return
-      if (expression === '0' && key === '(') return
 
       if (key === '(' || key === ')') {
-        if (key === '(' && digits.includes(lastChar)) return
+        const lastChar = expression.trim().slice(-1)
+
+        if (lastChar === '0' && expression.length > 1) return
+        if (key === '(' && digits.includes(lastChar) && lastChar !== '0') return
         if (key === ')' && lastChar === '(') return
         if (key === '(' && lastChar === ')') return
         if (key === ')' && !digits.includes(lastChar) && lastChar !== ')') {
@@ -72,8 +73,25 @@ const Calculator = () => {
         if (lastChar !== ')' && lastChar !== '(') return
       }
 
-      dispatch(expressionAction(`${expression}${key}`))
-      dispatch(resultAction(''))
+      if (expression === '0') {
+        if (expression === '0' && key === '(') {
+          dispatch(expressionAction(`${key}`))
+        }
+        if (expression === '0' && key === '-') {
+          dispatch(expressionAction(`${key}`))
+        }
+        if (expression === '0' && key === '+') {
+          dispatch(expressionAction(`${key}`))
+        }
+        if (expression === '0' && key === '*') {
+          dispatch(expressionAction(`${key}`))
+        }
+        if (expression === '0' && key === '/') {
+          dispatch(expressionAction(`${key}`))
+        }
+      } else {
+        dispatch(expressionAction(`${expression}${key}`))
+      }
     }
 
     if (key === '.') {
