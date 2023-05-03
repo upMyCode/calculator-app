@@ -1,6 +1,7 @@
 describe('Test a Keypad component', () => {
   it('It is should be with all keycups on keypad', () => {
     cy.visit('/')
+
     cy.get('[data-test-target="keypad-element-with-keycup-C"]').should(
       'have.text',
       'C'
@@ -84,6 +85,7 @@ describe('Test a Keypad component', () => {
   })
   it('All buttons should be clickable and displays on the expression, if this buttons are operation like "=", "C", "CE then are not displays like a symbols"', () => {
     cy.visit('/')
+
     cy.get('[data-test-target="keypad-element-with-keycup-1"]').click()
     cy.get('[data-test-target="keypad-element-with-keycup--"]').click()
     cy.get('[data-test-target="keypad-element-with-keycup-2"]').click()

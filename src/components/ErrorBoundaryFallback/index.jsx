@@ -4,8 +4,10 @@ import { ErrorMessage, ErrorBlock, ErrorResetter } from './styled'
 const ErrorBoundaryFallback = ({ error, resetErrorBoundary }) => {
   return (
     <ErrorBlock>
-      <ErrorMessage>{error.message}</ErrorMessage>
-      <ErrorResetter onClick={resetErrorBoundary}>X</ErrorResetter>
+      <ErrorMessage data-test-target="error-message">
+        {error.message}
+      </ErrorMessage>
+      <ErrorResetter data-test-target="error-message-resetter" onClick={resetErrorBoundary}>X</ErrorResetter>
     </ErrorBlock>
   )
 }

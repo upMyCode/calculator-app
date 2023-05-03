@@ -68,6 +68,7 @@ class ManageSettings extends React.Component {
             )}
           </ManagePanelPopUpMenuWrapper>
           <ClearHistoryButton
+            data-test-target="clear-all-history-button"
             onClick={() => {
               dispatch(expressionAction('0'))
               dispatch(resultAction(''))

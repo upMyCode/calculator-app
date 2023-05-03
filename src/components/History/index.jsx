@@ -13,9 +13,14 @@ const History = () => {
   return (
     <HistoryBlock>
       <HistoryTitle>History</HistoryTitle>
-      <HistoryOperationList>
+      <HistoryOperationList data-test-target="history-items-list">
         {history.map((historyItem, id) => (
-          <HistoryOperationItem key={id}>{historyItem}</HistoryOperationItem>
+          <HistoryOperationItem
+            data-test-target={`history-item-${id}`}
+            key={id}
+          >
+            {historyItem}
+          </HistoryOperationItem>
         ))}
       </HistoryOperationList>
     </HistoryBlock>
