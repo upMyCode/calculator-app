@@ -4,7 +4,10 @@ import { ControlPanelBlock } from './styled'
 
 const ControlPanel = ({ setSidebarVisible }) => {
   return (
-    <ControlPanelBlock onClick={() => setSidebarVisible((prev) => !prev)}>
+    <ControlPanelBlock
+      data-test-target="control-panel-button"
+      onClick={() => setSidebarVisible((prev) => !prev)}
+    >
       <History />
     </ControlPanelBlock>
   )

@@ -4,7 +4,10 @@ import { SidebarBlock, SidebarButton } from './styled'
 const Sidebar = ({ setSidebarVisible }) => {
   return (
     <SidebarBlock>
-      <SidebarButton onClick={() => setSidebarVisible((prev) => !prev)}>
+      <SidebarButton
+        data-test-target="sidebar-button"
+        onClick={() => setSidebarVisible((prev) => !prev)}
+      >
         ←
       </SidebarButton>
     </SidebarBlock>

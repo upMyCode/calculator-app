@@ -59,7 +59,12 @@ const Display = ({ handleButtonPressed }) => {
       {!isSidebarVisible && (
         <ControlPanel setSidebarVisible={setSidebarVisible} />
       )}
-      {isSidebarVisible && <Sidebar setSidebarVisible={setSidebarVisible} />}
+      {isSidebarVisible && (
+        <Sidebar
+          data-test-target="sidebar"
+          setSidebarVisible={setSidebarVisible}
+        />
+      )}
     </DisplayBlock>
   )
 }
