@@ -36,7 +36,7 @@ const Display = ({ handleButtonPressed }) => {
   return (
     <DisplayBlock>
       <CalculatorWindowWrapper isSidebarVisible={isSidebarVisible}>
-        <CalculatorWindow>
+        <CalculatorWindow data-test-target="display-calculator-window">
           <CalculatorExpression data-test-target="display-expression">
             <ErrorBoundary
               FallbackComponent={ErrorBoundaryFallback}

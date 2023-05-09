@@ -33,12 +33,17 @@ class ManageSettings extends React.Component {
   render() {
     const { dispatch } = this.props
     return (
-      <ManageSettingsBlock>
-        <ManageSettingsTitle>Settings</ManageSettingsTitle>
-        <ManagePanelLabel>Switch Theme</ManagePanelLabel>
+      <ManageSettingsBlock data-test-target="manage-settings-block">
+        <ManageSettingsTitle data-test-target="manage-settings-title">
+          Settings
+        </ManageSettingsTitle>
+        <ManagePanelLabel data-test-target="manage-panel-label">
+          Switch Theme
+        </ManagePanelLabel>
         <ManagePanelBlock>
           <ManagePanelPopUpMenuWrapper>
             <ManagePanelPopUpMenu
+              data-test-target="button-theme-switcher"
               isSwitcherThemeActive={this.state.isSwitcherThemeActive}
               onClick={this.handleThemeSwitcher}
             >
@@ -47,6 +52,7 @@ class ManageSettings extends React.Component {
             {this.state.isSwitcherThemeActive && (
               <ManagePanelPopUpList>
                 <ManagePanelPopUpElem
+                  data-test-target="button-theme-color-light"
                   onClick={(e) => {
                     this.handleChangeTheme(e)
                     this.handleThemeSwitcher()
@@ -56,6 +62,7 @@ class ManageSettings extends React.Component {
                   Light theme
                 </ManagePanelPopUpElem>
                 <ManagePanelPopUpElem
+                  data-test-target="button-theme-color-dark"
                   onClick={(e) => {
                     this.handleChangeTheme(e)
                     this.handleThemeSwitcher()

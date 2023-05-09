@@ -15,7 +15,7 @@ const Header = () => {
   const navigate = useNavigate()
 
   return (
-    <NavigationBlock>
+    <NavigationBlock data-test-target="header-main-block">
       <NavbarList>
         <NavbarElement>
           <NavbarTitleElement data-test-target="nav-bar-title">

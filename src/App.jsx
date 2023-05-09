@@ -26,7 +26,6 @@ const App = () => {
     XGA: '(max-width: 1279px) and (min-width: 1024px)'
   }
 
-  console.log(globalThemeColor)
   return (
     <ThemeProvider theme={{ globalThemeColor, appResizingResolutionWindow }}>
       <AppWrapper>
