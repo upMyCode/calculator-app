@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   KeypadBlock,
   KeypadLeftSideBlock,
@@ -55,3 +56,7 @@ const Keypad = ({ handleButtonPressed }) => {
 }
 
 export default Keypad
+
+Keypad.propTypes = {
+  handleButtonPressed: PropTypes.func
+}

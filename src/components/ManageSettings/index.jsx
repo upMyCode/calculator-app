@@ -1,4 +1,5 @@
 import * as React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import expressionAction from '../../store/actions/expressionAction'
 import setGlobalThemeAction from '../../store/actions/setGlobalThemeAction'
@@ -91,3 +92,7 @@ class ManageSettings extends React.Component {
 }
 
 export default connect()(ManageSettings)
+
+ManageSettings.propTypes = {
+  dispatch: PropTypes.func
+}

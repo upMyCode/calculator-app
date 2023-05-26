@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Expression = ({ expression, result, error }) => {
   if (expression) {
     if (error) throw new Error(error)
@@ -11,3 +13,9 @@ const Expression = ({ expression, result, error }) => {
 }
 
 export default Expression
+
+Expression.propTypes = {
+  error: PropTypes.string,
+  result: PropTypes.string,
+  expression: PropTypes.string
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import History from '../History'
 import { ControlPanelBlock } from './styled'
 
@@ -14,3 +15,7 @@ const ControlPanel = ({ setSidebarVisible }) => {
 }
 
 export default ControlPanel
+
+ControlPanel.propTypes = {
+  setSidebarVisible: PropTypes.func
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { SidebarBlock, SidebarButton } from './styled'
 
 const Sidebar = ({ setSidebarVisible }) => {
@@ -15,3 +16,7 @@ const Sidebar = ({ setSidebarVisible }) => {
 }
 
 export default Sidebar
+
+Sidebar.propTypes = {
+  setSidebarVisible: PropTypes.func
+}

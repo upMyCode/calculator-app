@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import { useSelector, useDispatch } from 'react-redux'
 import expressionAction from '../../store/actions/expressionAction'
 import resultAction from '../../store/actions/resultAction'
@@ -70,3 +71,7 @@ const Display = ({ handleButtonPressed }) => {
 }
 
 export default Display
+
+Display.propTypes = {
+  handleButtonPressed: PropTypes.func
+}
