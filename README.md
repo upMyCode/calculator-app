@@ -22,4 +22,5 @@ For start calculator app type the command _yarn start_
 
 ## In Calculator app you can change theme on the Settings page. The app has 2 main theme such as _Light theme_ and _Dark theme_
 
+![Screenshot change theming Calculator app](https://github.com/upMyCode/calculator-app/blob/main/src/assets/img/theme_1.png)
 ![Screenshot change theming Calculator app](https://github.com/upMyCode/calculator-app/blob/main/src/assets/img/theme_2.png)
